@@ -29,8 +29,8 @@
 
     fetch(`posts/${file}`)
       .then(r => r.text())
-      .then(tex => {
-        document.getElementById('content').innerText = tex;
+      .then(md => {
+        document.getElementById('content').innerHTML = marked.parse(md);
         MathJax.typesetPromise();
       });
   </script>
