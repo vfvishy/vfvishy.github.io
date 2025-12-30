@@ -1,16 +1,17 @@
-\section*{Microbubble Condensation: Single-Bubble Dynamics}
+# Microbubble Condensation: Single-Bubble Dynamics
 
 Condensation around a cold microbubble is dominated by latent heat removal.
 
-\subsection*{Governing Physics}
+## Governing Physics
 
-The Stefan number is defined as
-\[
+The Stefan number is defined as:
+
+$$
 Ste = \frac{C_p (T_\infty - T_i)}{L}
-\]
+$$
 
 For $Ste \ll 1$, condensation dominates.
 
-\subsection*{Implications}
+## Implications
 
 This supports the feasibility of surface-less microbubble condensers.
