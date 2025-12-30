@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post</title>
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div id="content">Loading…</div>
+    <p><a href="/blog">← Back to Blog</a></p>
+  </div>
+
+  <script>
+    const file = new URLSearchParams(window.location.search).get('file');
+
+    fetch(`posts/${file}`)
+      .then(r => r.text())
+      .then(tex => {
+        document.getElementById('content').innerText = tex;
+        MathJax.typesetPromise();
+      });
+  </script>
+</body>
+</html>
