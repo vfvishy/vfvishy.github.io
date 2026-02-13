@@ -4,41 +4,42 @@ body {
     font-family: 'Courier New', Courier, monospace;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 100vh;
     margin: 0;
-    padding: 2em 1em; /* Add some padding for smaller screens */
+    padding: 3em 1em;
     box-sizing: border-box;
 }
 
 .container {
     text-align: center;
     width: 100%;
+    max-width: 1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Ensure inline links (for example inside <p>) are readable on the dark background */
+/* Links */
 .container a,
 .container a:visited {
     color: white;
     text-decoration: none;
 }
+
 .container a:hover,
 .container a:focus {
-    color: white;
     text-decoration: underline;
     outline: none;
 }
 
-/* Styling for the Profile Photo */
+/* Profile Photo */
 .profile-photo {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* This makes the image a circle */
+    border-radius: 50%;
     border: 3px solid white;
-    object-fit: cover; /* This prevents the image from being stretched */
+    object-fit: cover;
     margin-bottom: 1.5em;
 }
 
@@ -47,46 +48,49 @@ h1 {
     margin-bottom: 0.5em;
 }
 
-p {
-    font-size: 1.2em;
-    margin-bottom: 2em;
-    max-width: 600px;
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 1em;
 }
 
+h3 {
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+    max-width: 700px;
+}
+
+/* Social Links */
 .links a {
-    color: white;
-    text-decoration: none;
     margin: 0 1em;
     font-size: 1.2em;
     border-bottom: 2px solid transparent;
     transition: border-bottom 0.3s ease;
     display: inline-block;
-    margin-bottom: 10px; /* Helps with wrapping on small screens */
+    margin-bottom: 10px;
 }
 
 .links a:hover {
     border-bottom: 2px solid white;
 }
 
-/* Styling for the Preprints Section */
-.preprints {
-    margin-top: 1.5em;
-    text-align: left;
-    max-width: 600px; /* Or another width that you prefer */
-    width: 90%;
-}
-
-/* Reduce spacing around the contact paragraph */
+/* Contact */
 .contact {
     margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
     font-size: 1.05em;
 }
 
-.preprints h2 {
-    text-align: center;
-    margin-bottom: 1em;
-    font-size: 1.8em;
+/* Preprints */
+.preprints {
+    margin-top: 2em;
+    text-align: left;
+    max-width: 700px;
+    width: 90%;
 }
 
 .preprints ul {
@@ -99,11 +103,8 @@ p {
 }
 
 .preprints li a {
-    color: white;
-    text-decoration: none;
     font-size: 1.1em;
     border-bottom: 1px solid white;
-    transition: background-color 0.3s ease;
 }
 
 .preprints li a:hover {
@@ -112,7 +113,28 @@ p {
 
 .authors {
     font-size: 0.9em;
-    color: #ccc; /* Lighter color for the author list */
+    color: #ccc;
     margin-top: 0.4em;
-    margin-bottom: 0;
 }
+
+/* ================= PDF VIEWER SECTION ================= */
+
+.paper-viewer {
+    margin-top: 4em;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.pdf-container {
+    width: 100%;
+    margin: 2em auto;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #444;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.pdf-container iframe {
+    border: none;
+}
+
