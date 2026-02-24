@@ -21,14 +21,6 @@ function Blog() {
       isLocal: false
     },
     {
-      id: 2,
-      title: "Microbubble Condensation: Single-Bubble Dynamics",
-      authors: "Author: Vishal Murali",
-      description: "Why single-bubble models matter in condensation-driven process intensification.",
-      tags: ["Condensation", "Fluid Dynamics", "Research"],
-      isLocal: false
-    },
-    {
       id: 3,
       title: "A Theoretical Framework for Staged Microbubble Condensers",
       authors: "Author: Vishal Murali • 2026",
