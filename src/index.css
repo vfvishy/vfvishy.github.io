@@ -9,15 +9,166 @@ html {
 }
 
 body {
-  background-color: #282c34;
-  color: white;
-  font-family: 'Courier New', Courier, monospace;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background: #0a1220;
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+    radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%), 
+    radial-gradient(at 0% 100%, hsla(321,50%,30%,1) 0, transparent 50%), 
+    radial-gradient(at 50% 100%, hsla(355,70%,30%,1) 0, transparent 50%), 
+    radial-gradient(at 100% 100%, hsla(242,43%,30%,1) 0, transparent 50%);
+  background-attachment: fixed;
+  background-size: 200% 200%;
+  animation: meshGradient 25s ease infinite;
+  color: #f0f2f5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  letter-spacing: 0.3px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
 }
 
-body.light-mode {
-  background-color: #f5f5f5;
-  color: #333;
+@keyframes meshGradient {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px); 
+  }
+  50% { 
+    transform: translateY(-15px); 
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% { 
+    transform: translateY(0px) scale(1); 
+  }
+  50% { 
+    transform: translateY(-20px) scale(1.02); 
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(0, 212, 255, 0.6);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* The Core Liquid Glass Utility */
+.liquid-glass-effect {
+  /* Liquid Glass UI - Premium Style */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  
+  border-radius: 30px;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  padding: 3rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.light-mode .liquid-glass-effect {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  backdrop-filter: blur(12px);
+}
+
+.liquid-glass-effect::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 30px;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.15) 0%, transparent 40%, transparent 60%, rgba(255, 255, 255, 0.05) 100%);
+  pointer-events: none;
+}
+
+.liquid-glass-effect:hover {
+  /* transform is handled by JS in LiquidCard, but we can boost the shadow */
+  box-shadow: 0 15px 45px 0 rgba(0, 0, 0, 0.45);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Liquid Buttons like dashersw.github.io */
+.liquid-button {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0.95em 1.8em;
+  border-radius: 50px; /* Bubbly shape */
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95em;
+  letter-spacing: 0.3px;
+  position: relative;
+}
+
+.liquid-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.liquid-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px) scale(1.08);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.liquid-button:active {
+  transform: scale(0.92) translateY(-1px);
+  box-shadow: 
+    inset 0 6px 18px rgba(0, 0, 0, 0.4),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.2);
 }
 
 #root {
@@ -27,76 +178,20 @@ body.light-mode {
   flex-direction: column;
 }
 
-.app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  width: 100%;
-}
-
 .main-content {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 2em 1em;
+  padding: 4em 1em;
   max-width: 100%;
 }
 
-/* General Link Styles */
-a {
-  color: inherit;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-button {
-  background: none;
-  border: none;
-  color: inherit;
-  cursor: pointer;
-  font-family: inherit;
-  transition: all 0.2s ease;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-button:focus {
-  outline: 2px solid white;
-  outline-offset: 2px;
-}
-
-body.light-mode button:focus {
-  outline-color: #333;
-}
-
-/* Dark/Light Mode Transitions */
+/* Dark/Light Mode Transitions (kept for compatibility) */
 .dark-mode {
-  --bg-primary: #282c34;
-  --bg-secondary: #3a4047;
-  --text-primary: white;
-  --text-secondary: #b0b8c1;
-  --border-color: #444;
-  --hover-bg: #404a52;
+  --bg-primary: #0a1220;
 }
 
 .light-mode {
-  --bg-primary: #f5f5f5;
-  --bg-secondary: #e8e8e8;
-  --text-primary: #333;
-  --text-secondary: #666;
-  --border-color: #ddd;
-  --hover-bg: #efefef;
-}
-
-@media (max-width: 768px) {
-  .main-content {
-    padding: 1em 0.5em;
-  }
+  background: radial-gradient(circle at 50% 50%, #eef2f7 0%, #d1d9e6 100%);
 }

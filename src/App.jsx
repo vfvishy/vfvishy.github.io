@@ -4,6 +4,7 @@ import Navigation from './components/Navigation'
 import Profile from './components/Profile'
 import Blog from './components/Blog'
 import Footer from './components/Footer'
+import LiquidCard from './LiquidCard'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
@@ -24,8 +25,10 @@ function App() {
       />
       
       <main className="main-content">
-        {currentPage === 'home' && <Profile />}
-        {currentPage === 'blog' && <Blog />}
+        <LiquidCard>
+          {currentPage === 'home' && <Profile />}
+          {currentPage === 'blog' && <Blog />}
+        </LiquidCard>
       </main>
 
       <Footer />

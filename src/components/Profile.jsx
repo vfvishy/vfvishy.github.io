@@ -18,7 +18,7 @@ function Profile() {
         <h1 className="name-title">Vishal Murali</h1>
         
         <p className="bio">
-          I'm a Research Scholar working on <strong>Fluid Dynamics</strong> and <strong>Bioprocess Intensification</strong>. 
+          I'm a Research Scholar working on <strong>Fluid Dynamics</strong> and <strong>Bioprocess Intensification</strong> focussed on <strong>Microbubble aided Bioprocess Intensification</strong>. I aim to produce impactful research that can be applied in real-world scenarios. I have a keen interest in <strong>Multiphysics Modelling</strong> and <strong>Computational Fluid Dynamics</strong>. 
           I support <a href="https://www.gnu.org/philosophy/free-software-intro.en.html" target="_blank" rel="noopener noreferrer">
             free software movement
           </a> and <a href="https://www.unesco.org/en/open-science" target="_blank" rel="noopener noreferrer">

@@ -1,10 +1,10 @@
 /* App Component Styles */
 .app {
-  background-color: #282c34;
+  background: transparent;
 }
 
 .app.light-mode {
-  background-color: #f5f5f5;
+  background: transparent;
 }
 
 @media (max-width: 768px) {
