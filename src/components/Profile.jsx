@@ -9,7 +9,7 @@ function Profile() {
 
   return (
     <div className="profile-container">
-      <div className="profile-header">
+      <div className="profile-header reveal">
         <img 
           src="/profilepic.jpeg" 
           alt="Profile picture of Vishal Murali" 
@@ -28,7 +28,7 @@ function Profile() {
         </p>
       </div>
 
-      <div className="social-links">
+      <div className="social-links reveal">
         {socialLinks.map((link) => (
           <a 
             key={link.name}
@@ -44,7 +44,7 @@ function Profile() {
         ))}
       </div>
 
-      <div className="contact-section">
+      <div className="contact-section reveal" style={{animationDelay: '0.3s'}}>
         <p className="contact-label">Contact me at</p>
         <a href="mailto:vishalm@vortexflow.org" className="email-link">
           vishalm@vortexflow.org
