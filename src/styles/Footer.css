@@ -1,0 +1,57 @@
+/* Footer Styles */
+.footer {
+  background-color: #1a1d23;
+  border-top: 1px solid #3a4047;
+  padding: 2em 1em;
+  margin-top: 3em;
+  transition: all 0.3s ease;
+}
+
+.light-mode .footer {
+  background-color: #e0e0e0;
+  border-top-color: #bbb;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 0.95em;
+  color: #b0b8c1;
+}
+
+.light-mode .footer-content p {
+  color: #666;
+}
+
+.footer-tagline a {
+  color: #61dafb;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+.light-mode .footer-tagline a {
+  color: #0066cc;
+}
+
+.footer-tagline a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.5em 1em;
+    margin-top: 2em;
+  }
+
+  .footer-content p {
+    font-size: 0.9em;
+  }
+}
