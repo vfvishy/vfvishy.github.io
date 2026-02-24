@@ -11,7 +11,7 @@ function Profile() {
     <div className="profile-container">
       <div className="profile-header">
         <img 
-          src="resources/profilepic.jpeg" 
+          src="/profilepic.jpeg" 
           alt="Profile picture of Vishal Murali" 
           className="profile-photo"
         />
