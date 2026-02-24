@@ -19,15 +19,6 @@ function Blog() {
       link: "https://engrxiv.org/preprint/view/4139",
       tags: ["Multiphysics", "Ethanol", "Microbubbles"],
       isLocal: false
-    },
-    {
-      id: 3,
-      title: "A Theoretical Framework for Staged Microbubble Condensers",
-      authors: "Author: Vishal Murali • 2026",
-      description: "Local preprint available for download.",
-      link: "papers/microbubble_preprint.pdf",
-      tags: ["Microbubbles", "Condensation", "Theory"],
-      isLocal: true
     }
   ]
 
