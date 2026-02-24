@@ -1,14 +1,1 @@
-/* App Component Styles */
-.app {
-  background: transparent;
-}
-
-.app.light-mode {
-  background: transparent;
-}
-
-@media (max-width: 768px) {
-  .app {
-    padding: 1em;
-  }
-}
+/* Empty - all styles in index.css */

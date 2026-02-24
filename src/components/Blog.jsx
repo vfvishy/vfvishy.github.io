@@ -14,7 +14,15 @@ function Blog() {
   const preprints = [
     {
       id: 1,
-      title: "A Multiphysics modelling approach of stripping Ethanol from Ethanol-Water mixture using hot microbubbles",
+      title: "A Theoretical Framework for Staged Microbubble Condensers",
+      authors: "Author: Vishal Murali",
+      link: "/papers/microbubble_preprint.pdf",
+      tags: ["Multiphysics", "Ethanol", "Microbubbles"],
+      isLocal: true
+    },
+    {
+      id: 2,
+      title: "A Multiphysics modelling approach of stripping Ethanol from Ethanol-Water mixture using hot microbubbles (EngrXiv)",
       authors: "Author: Vishal Murali",
       link: "https://engrxiv.org/preprint/view/4139",
       tags: ["Multiphysics", "Ethanol", "Microbubbles"],

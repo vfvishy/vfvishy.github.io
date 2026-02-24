@@ -1,6 +1,6 @@
 import '../styles/Navigation.css'
 
-function Navigation({ currentPage, setCurrentPage, darkMode, toggleDarkMode }) {
+function Navigation({ currentPage, setCurrentPage }) {
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -28,15 +28,6 @@ function Navigation({ currentPage, setCurrentPage, darkMode, toggleDarkMode }) {
               onClick={() => setCurrentPage('blog')}
             >
               Blog/Preprints
-            </button>
-          </li>
-          <li>
-            <button
-              className="nav-link theme-toggle"
-              onClick={toggleDarkMode}
-              title="Toggle dark/light mode"
-            >
-              {darkMode ? '☀️' : '🌙'}
             </button>
           </li>
         </ul>

@@ -8,20 +8,12 @@ import LiquidCard from './LiquidCard'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
-  const [darkMode, setDarkMode] = useState(true)
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode)
-    document.body.classList.toggle('light-mode')
-  }
 
   return (
-    <div className={`app ${darkMode ? 'dark-mode' : 'light-mode'}`}>
+    <div className="app">
       <Navigation 
         currentPage={currentPage} 
         setCurrentPage={setCurrentPage}
-        darkMode={darkMode}
-        toggleDarkMode={toggleDarkMode}
       />
       
       <main className="main-content">
